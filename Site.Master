@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Kadi12688e.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+</head>
+<body>
+<form runat="server">
+<asp:ScriptManager runat="server"></asp:ScriptManager>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Tahoma', 'Segoe UI', sans-serif;
+        background-color: #FDFCFA;
+        direction: rtl;
+    }
+    .navbar-top {
+        background-color: #F7F4EE;
+        border-bottom: 1px solid #E5E0D5;
+        padding: 14px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-icons {
+        display: flex;
+        gap: 20px;
+        color: #4A4238;
+        font-size: 20px;
+    }
+    .navbar-icons a {
+        color: #4A4238;
+        text-decoration: none;
+    }
+    .navbar-logo {
+        text-align: center;
+    }
+    .navbar-logo .title {
+        font-size: 19px;
+        font-weight: 600;
+        color: #4A4238;
+        letter-spacing: 1px;
+    }
+    .navbar-logo .subtitle {
+        font-size: 10px;
+        color: #8A8172;
+        letter-spacing: 2px;
+    }
+    .navbar-menu {
+        background-color: #F7F4EE;
+        display: flex;
+        justify-content: center;
+        gap: 28px;
+        padding: 12px 20px;
+    }
+    .navbar-menu a {
+        font-size: 13px;
+        color: #8A8172;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .navbar-menu a.active {
+        color: #4A4238;
+        font-weight: 600;
+    }
+</style>
+
+<div class="navbar-top">
+    <div class="navbar-icons">
+        <a href="Booking.aspx" title="حجز موعد">📅</a>
+        <a href="#" title="بحث">🔍</a>
+        <a href="#" title="القائمة">☰</a>
+    </div>
+    <div class="navbar-logo">
+        <div class="title">عيادة يسر</div>
+        <div class="subtitle">YUSR CLINIC</div>
+    </div>
+</div>
+
+<div class="navbar-menu">
+    <a href="Default.aspx" class="active">الرئيسية</a>
+    <a href="Admin/Specialties.aspx">التخصصات</a>
+    <a href="Specialties.aspx">الأطباء</a>
+    <a href="Specialties.aspx">احجز موعد</a>
+    <a href="Login.aspx">تسجيل الدخول</a>
+</div>
+
+<div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+           <style>
+    footer {
+        background-color: #F7F4EE;
+        border-top: 1px solid #E5E0D5;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+    footer p {
+        color: #8A8172;
+        font-size: 12px;
+        margin: 0;
+    }
+</style>
+
+<footer>
+    <p>تصميم وتطوير: كادي نايف الحربي &copy; <%: DateTime.Now.Year %> - عيادة يسر</p>
+</footer>
+        </div>
+
+    </form>
+</body>
+</html>
