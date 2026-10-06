@@ -132,7 +132,9 @@
     <Content Include="Admin\Web.config" />
     <Content Include="connections.config" />
     <None Include="Properties\PublishProfiles\kadi29ii-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\kadi29ii-001-site1 - FTP1.pubxml" />
     <None Include="Properties\PublishProfiles\kadi29ii-001-site1 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\kadi29ii-001-site1 - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Admin\Patients.aspx" />
     <Content Include="Login.aspx" />
